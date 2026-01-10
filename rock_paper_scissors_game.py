@@ -7,10 +7,11 @@ computer_score = 0
 tie = 0
 
 n = int(input("ENTER THE NUMBER OF ROUNDS: "))
-print("\nINITIATING THE GAME...\n")
+print("\nINITIALISING THE GAME...\n")
 for i in range(0, n):
 	computer_choice = choice(choices)
 
+	print(f"\nROUND {i+1}\n")
 	user_choice = input("ENTER 'ROCK', 'PAPER' OR 'SCISSOR': ").lower()
 	print(f"USER HAS CHOOSEN: {user_choice}")
 	print(f"COMPUTER HAS CHOOSEN: {computer_choice}")
@@ -37,6 +38,7 @@ for i in range(0, n):
 			print("PROCESSING YOUR REQUEST...")
 		elif (response == ("no")):
 			print("EXISTING THE PROGRAM...")
+			break
 		else:
 			print("INVALID INPUT, GET READY FOR THE NEXT ROUND...")
 	else:
@@ -52,6 +54,7 @@ elif(user_score < computer_score):
 	print("\nBETTER LUCK NEXT TIME")
 else:
 	print("\nAAH...IT'S A TIE")
+
 
 
 
